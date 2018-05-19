@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress ALL -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>com.kalix.common</groupId>
+        <artifactId>common-parent</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kalix.common.order</groupId>
+    <artifactId>order-parent</artifactId>
+    <name>Kalix Common Order</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>common-order-entities</module>
+        <module>common-order-api</module>
+        <module>common-order-dao</module>
+        <module>common-order-biz</module>
+        <module>common-order-rest</module>
+        <module>common-order-extjs</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.kalix.common.order</groupId>
+                <artifactId>common-order-api</artifactId>
+                <version>${project.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.common.order</groupId>
+                <artifactId>common-order-entities</artifactId>
+                <version>${project.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.admin.audit</groupId>
+                <artifactId>admin-audit-biz</artifactId>
+                <version>${project.admin.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
